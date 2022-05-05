@@ -1,0 +1,2 @@
+,ObjectName,Line1,Line2,NoradID,Classification,Designator,EpochYear,EpochDay,1stMeanDer,2ndMeanDer,BDrag,ElSetTyme,ElementNumber,Inclination,RighAscension,Eccentricity,Perigee,MeanAnomaly,MeanMotion,Revolution
+0,ITASAT 1,1 43786U 18099AE  22124.45288537  .00002305  00000+0  20811-3 0  9992,2 43786  97.6248 192.8395 0015887  59.9779 300.3017 14.96369619186472,43786,U,18099AE ,22,124.45288537, .00002305, 00000+0, 20811-3,0, 999, 97.6248,192.8395,0015887, 59.9779,300.3017,14.96369619,18647
