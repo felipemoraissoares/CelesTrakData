@@ -6,10 +6,12 @@ nowStr = now.strftime("%Y%m%d-%H%M%S")
 
 # More Information http://celestrak.com/NORAD/documentation/gp-data-formats.php
 # url = "http://celestrak.com/NORAD/elements/gp.php?GROUP=gps-ops&FORMAT=tle
+# active = http://celestrak.com/NORAD/elements/gp.php?GROUP=active&FORMAT=tle
 
 # Define params to get information from http://celestrak.com/
 args = {
     'url_main': "http://celestrak.com/NORAD/elements/gp.php?CATNR=",
+    'url_all_sat': "http://celestrak.com/NORAD/elements/gp.php?GROUP=active&FORMAT=tle",
     'url_test': "http://celestrak.com/NORAD/elements/gp.php?{QUERY}=VALUE[&FORMAT=VALUE]",
     'query': "",
     'norad_id': "",

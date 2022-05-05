@@ -3,8 +3,12 @@ import requests
 from args import args
 from tledetach import detach
 
-def tlereader(noradid):
-    url = args['url_main'] + noradid
+def tlereader(usr_input):
+
+    if usr_input == "all":
+        url = args['url_all_sat']
+    else:
+        url = args['url_main'] + usr_input
 
     print(f"Get information from: {url}")
 
@@ -29,6 +33,6 @@ def tlereader(noradid):
 
     # Function to detach TLE lines
     if not tle_list:
-        print(f"NoradID: {noradid} does not return any data!")
+        print(f"NoradID: {usr_input} does not return any data!")
     else:
         detach(tle_list)

@@ -7,7 +7,9 @@ from args import args
 def detach(tle_list):
     df_tle = pd.DataFrame(tle_list, columns=['ObjectName', 'Line1', 'Line2'])
 
+    tle_list_detach = []
     for item in tle_list:
+        objname = item[0].strip()
         line1 = item[1].strip()
         line2 = item[2].strip()
 
@@ -32,26 +34,21 @@ def detach(tle_list):
         mean_motion = line2[52:63]
         revolution = line2[63:68]
 
-        df_tle['NoradID'] = noradid
-        df_tle['Classification'] = classification
-        df_tle['Designator'] = designator
-        df_tle['EpochYear'] = epoch_year
-        df_tle['EpochDay'] = epoch_day
-        df_tle['1stMeanDer'] = fstder
-        df_tle['2ndMeanDer'] = sndder
-        df_tle['BDrag'] = bdrag
-        df_tle['ElSetTyme'] = eltype
-        df_tle['ElementNumber'] = elset
-        df_tle['Inclination'] = inclination
-        df_tle['RighAscension'] = ascend_mode
-        df_tle['Eccentricity'] = eccentricity
-        df_tle['Perigee'] = perigee
-        df_tle['MeanAnomaly'] = mean_anomaly
-        df_tle['MeanMotion'] = mean_motion
-        df_tle['Revolution'] = revolution
+        tle_line = (objname, line1, line2, noradid, classification, designator, epoch_year, epoch_day,
+                               fstder, sndder, bdrag, eltype, elset, inclination, ascend_mode, eccentricity,
+                               perigee, mean_anomaly, mean_motion, revolution)
 
+        tle_list_detach.append(tle_line)
+
+        # end for
+
+    # Create a pandas dataframe to export csv
+    df_tle = pd.DataFrame(tle_list_detach, columns=['ObjectName', 'Line1', 'Line2', 'NoradID', 'Classification',
+                                                    'Designator', 'EpochYear', 'EpochDay', 'FstMeanDer',
+                                                    'SndMeanDer', 'BDrag', 'ElSetTyme', 'ElementNumber',
+                                                    'Inclination', 'RightAscension', 'Eccentricity', 'Perigee',
+                                                    'MeanAnomaly', 'MeanMotion', 'Revolution'])
     print(df_tle)
-
     #Change output in args.py
     df_tle.to_csv(args['output_csv'])
 

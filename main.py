@@ -10,17 +10,21 @@ from tlereader import tlereader
 
 if __name__ == '__main__':
 
+    print("Type A for all Active Satellites or enter with NoradID...")
+    print("")
+
     valid_id = False
-
     while not valid_id:
-        noradid = input("Set the object NORAD ID: ")
-
-        try:
-            int(noradid)
-            tlereader(noradid)
+        usr_input = input("Enter the desired option: ")
+        if usr_input.lower() == "a":
+            tlereader("all")
             valid_id = True
-
-        except ValueError:
-            print("Please insert a valid NoradID!")
+        else:
+            try:
+                int(usr_input)
+                tlereader(usr_input)
+                valid_id = True
+            except ValueError:
+                print("Please type a valid command!")
 
     print("End of Process!")
