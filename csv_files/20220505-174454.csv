@@ -1,0 +1,2 @@
+,ObjectName,Line1,Line2,NoradID,Classification,Designator,EpochYear,EpochDay,FstMeanDer,SndMeanDer,BDrag,ElSetTyme,ElementNumber,Inclination,RightAscension,Eccentricity,Perigee,MeanAnomaly,MeanMotion,Revolution
+0,STARLINK-2214,1 48566U 21041P   22125.28235140  .00004612  00000+0  32837-3 0  9992,2 48566  53.0543 326.2515 0001623  80.4985 279.6188 15.06395513 53389,48566,U,21041P  ,22,125.28235140, .00004612, 00000+0, 32837-3,0, 999, 53.0543,326.2515,0001623, 80.4985,279.6188,15.06395513, 5338

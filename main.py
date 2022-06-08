@@ -1,5 +1,7 @@
+## Project CEI SSCS
+## Author: Felipe de Morais Soares 
 ##
-## Simple Python projetct to obtain data of objects in space orbit from http://celestrak.com/
+## Simple Python project to obtain data of objects in space orbit from http://celestrak.com/
 ## The TLE data will be saved in a csv file according to insert NoradID
 ## The information is acquired at http://celestrak.com/NORAD/documentation/gp-data-formats.php
 ## The results are converted from TLE's format to CSV but preserved the line1 and line2 strings
